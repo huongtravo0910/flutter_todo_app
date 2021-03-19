@@ -1,16 +1,13 @@
 # flutter_todo_app
 
-A new Flutter project.
+A Flutter project.
+Coding challenge
 
-## Getting Started
+## Introduction
+This is a todo managment app, including one text input field and 3 screens as images. The appearance for this is followed by the design on figma : https://www.figma.com/file/JEUOwdeHFnYn8fGrEUS0to/Untitled?node-id=17%3A2
+![1](https://user-images.githubusercontent.com/66101016/111760924-d9e2e480-88d1-11eb-9185-e3887e3bca26.png)
+![screen_2](https://user-images.githubusercontent.com/66101016/111760931-dd766b80-88d1-11eb-8a8b-9f75de26b8e4.png)
+![screen_3](https://user-images.githubusercontent.com/66101016/111760941-df402f00-88d1-11eb-91ae-1f74f05267e3.png)
 
-This project is a starting point for a Flutter application.
+### Test coverage
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
