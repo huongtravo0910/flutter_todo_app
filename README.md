@@ -6,8 +6,9 @@ A Flutter project _ coding challenge from Manabie recruitment team.
 This is a todo managment app, including one text input field and 3 screens as images. The appearance for this is followed by the design on figma : https://www.figma.com/file/JEUOwdeHFnYn8fGrEUS0to/Untitled?node-id=17%3A2.
 
 ![screen_1 (1)](https://user-images.githubusercontent.com/66101016/111765013-7313fa00-88d6-11eb-8cd0-52b23a0fa268.png)
-![screen_2 (1)](https://user-images.githubusercontent.com/66101016/111765009-71e2cd00-88d6-11eb-8da3-9763aa58a06a.png)
 ![screen_3 (1)](https://user-images.githubusercontent.com/66101016/111765016-73ac9080-88d6-11eb-9ac7-2362eaeb345c.png)
+![screen_2 (1)](https://user-images.githubusercontent.com/66101016/111765009-71e2cd00-88d6-11eb-8da3-9763aa58a06a.png)
+
 
 
 
