@@ -18,10 +18,10 @@ My test coverage result:
 ![test_result](https://user-images.githubusercontent.com/66101016/111763999-53c89d00-88d5-11eb-8093-942d5b1a0df1.png)
 
 #### How to run this?
-I flow a instruction on https://stackoverflow.com/questions/50789578/how-can-the-code-coverage-data-from-flutter-tests-be-displayed?fbclid=IwAR0C_c2GUH-U0MythBpPPLsQDbpm1M_tB2fdLoOlR7ypIMPokrOkBlg-ZXs as flow: 
+I flowed a instruction on https://stackoverflow.com/questions/50789578/how-can-the-code-coverage-data-from-flutter-tests-be-displayed?fbclid=IwAR0C_c2GUH-U0MythBpPPLsQDbpm1M_tB2fdLoOlR7ypIMPokrOkBlg-ZXs as flow: 
 
 "
-You can also install lcov and convert the lcov.info file to HTML pages and then see the result in the browser with sorting option
+You can install lcov and convert the lcov.info file to HTML pages and then see the result in the browser with sorting option
 
 Installing in Ubuntu:
 ```
