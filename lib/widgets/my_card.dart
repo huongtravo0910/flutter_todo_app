@@ -6,7 +6,6 @@ class MyCard extends StatelessWidget {
   const MyCard({Key key, this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
       child: Container(

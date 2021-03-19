@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_todo_app/models/todo.dart';
 import 'package:flutter_todo_app/widgets/todo_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_todo_app/provider/todos_state_notifier_provider.dart';
+import 'package:flutter_todo_app/providers/todos_state_notifier_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -53,9 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // final double _width = MediaQuery.of(context).size.width;
     return Consumer(builder: (context, watch, child) {
-      // final list = watch(todosStateNotifierProvider.state);
       List<Todo> list = [];
       debugPrint(list.toString());
       switch (_selectedIndex) {
@@ -126,21 +124,28 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                key: Key("homeButton"),
+                key: Key("allButton"),
               ),
               label: 'All',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.casino_sharp, key: Key("incompletedButton")),
+              icon: Icon(
+                Icons.casino_sharp,
+                key: Key("incompletedButton"),
+              ),
               label: 'Incompleted',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.check, key: Key("completedButton")),
+              icon: Icon(
+                Icons.check,
+                key: Key("completedButton"),
+              ),
               label: 'Completed',
             ),
           ],
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey.withOpacity(0.5),
           onTap: _onItemTapped,
         ),
       );

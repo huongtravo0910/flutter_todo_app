@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_todo_app/provider/todos_state_notifier_provider.dart';
+import 'package:flutter_todo_app/providers/todos_state_notifier_provider.dart';
 import 'package:flutter_todo_app/widgets/my_card.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

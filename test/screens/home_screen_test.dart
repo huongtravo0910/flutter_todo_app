@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_app/models/todo.dart';
-import 'package:flutter_todo_app/provider/todos_repository_provider.dart';
+import 'package:flutter_todo_app/providers/todos_repository_provider.dart';
 import 'package:flutter_todo_app/repositories/i_todos_repository.dart';
 import 'package:flutter_todo_app/screens/home_screen.dart';
 import 'package:flutter_todo_app/widgets/todo_widget.dart';
@@ -131,7 +131,7 @@ void main() {
       expect(find.byKey(Key("text2")), findsOneWidget);
 
       //Back to All screen
-      await tester.tap(find.byKey(Key("homeButton")));
+      await tester.tap(find.byKey(Key("allButton")));
       await tester.pump();
 
       expect(find.byKey(Key("text1")), findsOneWidget);

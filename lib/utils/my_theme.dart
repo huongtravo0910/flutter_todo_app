@@ -12,16 +12,6 @@ class MyTheme {
         secondaryHeaderColor: _green,
         accentColor: _green,
         hintColor: _greyLight,
-        // inputDecorationTheme: InputDecorationTheme(
-        //     border: OutlineInputBorder(
-        //       borderRadius: BorderRadius.circular(20),
-        //       borderSide: BorderSide(color: _greyLight),
-        //     ),
-        //     focusedBorder: OutlineInputBorder(
-        //       borderRadius: BorderRadius.circular(20),
-        //       borderSide: BorderSide(color: _greyLight),
-        //     ),
-        //     hintStyle: TextStyle(fontSize: 14)),
         buttonTheme: ButtonThemeData(
           buttonColor: _green,
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
@@ -43,40 +33,6 @@ class MyTheme {
           button: TextStyle(
             color: Colors.red,
           ),
-          // headline6: TextStyle(
-          //   //16
-          //   color: Colors.black,
-          // ),
-          // headline5: TextStyle(
-          //   //16
-          //   color: _brownDark,
-          //   fontSize: 20,
-          // ),
-          // headline4: TextStyle(
-          //   //24
-          //   fontSize: 24,
-          //   color: Colors.black,
-          //   fontWeight: FontWeight.bold,
-          // ),
-          // headline3: TextStyle(
-          //   //24
-          //   fontSize: 32,
-          //   color: Colors.black,
-          //   fontWeight: FontWeight.bold,
-          // ),
-          // subtitle1: TextStyle(
-          //   //20
-          //   fontFamily: 'Ruda',
-          //   color: Colors.black,
-          //   fontSize: 20,
-          //   fontWeight: FontWeight.bold,
-          // ),
-          // subtitle2: TextStyle(
-          //   //20
-          //   color: _brownLight,
-          //   fontSize: 16,
-          //   fontWeight: FontWeight.bold,
-          // ),
         ));
   }
 }

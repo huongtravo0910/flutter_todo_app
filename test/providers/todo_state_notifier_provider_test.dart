@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_todo_app/models/todo.dart';
-import 'package:flutter_todo_app/provider/todos_state_notifier_provider.dart';
-import 'package:flutter_todo_app/provider/todos_repository_provider.dart';
+import 'package:flutter_todo_app/providers/todos_state_notifier_provider.dart';
+import 'package:flutter_todo_app/providers/todos_repository_provider.dart';
 import 'package:flutter_todo_app/repositories/i_todos_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -22,7 +22,6 @@ void main() {
         ],
       );
 
-      // final container = ProviderContainer();
       String title = "title";
       container.read(todosStateNotifierProvider).createTodo(title);
       debugPrint("title : " +
@@ -41,7 +40,6 @@ void main() {
               .overrideWithProvider(Provider((ref) => MockTodosRepository()))
         ],
       );
-      // final container = ProviderContainer();
       container.read(todosStateNotifierProvider).createTodo("title1");
       container.read(todosStateNotifierProvider).createTodo("title2");
       container.read(todosStateNotifierProvider).createTodo("title3");
