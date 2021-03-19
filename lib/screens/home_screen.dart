@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_app/models/todo.dart';
 import 'package:flutter_todo_app/widgets/todo_widget.dart';
-import 'package:flutter_todo_app/widgets/todo_widget2.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_todo_app/provider/todos_state_notifier_provider.dart';
 
@@ -110,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ListView.builder(
               itemBuilder: (context, index) {
                 final value = list[index];
-                return TodoWidget2(
+                return TodoWidget(
                   key: Key(value.getId.toString()),
                   id: value.getId,
                   title: value.getTitle,

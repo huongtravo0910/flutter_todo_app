@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_todo_app/models/todo.dart';
 import 'package:flutter_todo_app/provider/todos_repository_provider.dart';
 import 'package:flutter_todo_app/repositories/i_todos_repository.dart';
-import 'package:flutter_todo_app/screens/screen.dart';
+import 'package:flutter_todo_app/screens/home_screen.dart';
 import 'package:flutter_todo_app/widgets/todo_widget.dart';
-import 'package:flutter_todo_app/widgets/todo_widget2.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/foundation.dart';
@@ -33,11 +32,11 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.byType(ListView), findsOneWidget);
-      expect(tester.widgetList(find.byType(TodoWidget2)), [
-        isA<TodoWidget2>()
+      expect(tester.widgetList(find.byType(TodoWidget)), [
+        isA<TodoWidget>()
             .having((s) => s.title, "check first element value", expectedTitle)
       ]);
-      expect(find.byType(TodoWidget2), findsOneWidget);
+      expect(find.byType(TodoWidget), findsOneWidget);
       expect(find.text(expectedTitle), findsOneWidget);
     });
     testWidgets("update list when a todo is deleted ",
@@ -59,7 +58,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.byType(ListView), findsOneWidget);
-      expect(find.byType(TodoWidget2), findsOneWidget);
+      expect(find.byType(TodoWidget), findsOneWidget);
       expect(find.text(expectedTitle), findsNothing);
     });
 
