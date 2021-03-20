@@ -41,7 +41,16 @@ genhtml coverage/lcov.info -o coverage/html
  
  ## My integration test
  ![chosen_gif](https://user-images.githubusercontent.com/66101016/111856719-4526c800-895f-11eb-9f9a-61a5ab585cf4.gif)
-###How to run this?
+ 
+#### How to run this?
+
+Make sure to have these
+```
+dev_dependencies:
+  flutter_driver:
+    sdk: flutter
+  test: any
+ ```
 Run the command line
 ```
 flutter drive --target=test_driver/app.dart
