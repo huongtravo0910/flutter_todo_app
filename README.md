@@ -56,6 +56,6 @@ Run the command line
 flutter drive --target=test_driver/app.dart
 ```
 
-Reference: An introduction to integration testing, link: https://flutter.dev/docs/cookbook/testing/integration/introduction
+Reference: Flutter docs - "An introduction to integration testing", link: https://flutter.dev/docs/cookbook/testing/integration/introduction
  
  
