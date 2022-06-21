@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_app/models/todo.dart';
+import 'package:flutter_todo_app/utils/app_theme.dart';
 import 'package:flutter_todo_app/widgets/todo_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_todo_app/providers/todos_state_notifier_provider.dart';
@@ -53,6 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = AppTheme.of(context);
     return Consumer(builder: (context, watch, child) {
       List<Todo> list = [];
       debugPrint(list.toString());
@@ -75,7 +77,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
       return Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).accentColor,
+          backgroundColor: AppTheme.of(context).color.accentColor,
+          // backgroundColor: Theme.of(context).accentColor,
           title: Center(child: Text("Todo App")),
         ),
         body: Column(
@@ -96,7 +99,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
-                          Theme.of(context).primaryColor),
+                          AppTheme.of(context).color.primaryColor),
+                      // Theme.of(context).primaryColor),
                     ),
                     key: Key("addButton"),
                     onPressed: () => _addTodo(_titleController.text),
@@ -119,7 +123,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Theme.of(context).primaryColor,
+          backgroundColor: AppTheme.of(context).color.primaryColor,
+          // backgroundColor: Theme.of(context).primaryColor,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(

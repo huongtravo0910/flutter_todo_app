@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_todo_app/utils/app_theme.dart';
 
 class MyCard extends StatelessWidget {
   final Widget child;
@@ -19,7 +20,8 @@ class MyCard extends StatelessWidget {
               blurRadius: 1.0,
             ),
           ],
-          color: Theme.of(context).canvasColor,
+          color: AppTheme.of(context).color.canvasColor,
+          // color: Theme.of(context).canvasColor,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Padding(

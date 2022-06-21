@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_app/providers/todos_state_notifier_provider.dart';
+import 'package:flutter_todo_app/utils/app_theme.dart';
 import 'package:flutter_todo_app/widgets/my_card.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -44,6 +45,7 @@ class _TodoWidgetState extends State<TodoWidget>
 
   @override
   Widget build(BuildContext context) {
+    final theme = AppTheme.of(context);
     final animation = Tween(
             begin: const Offset(0.0, 0.0), end: const Offset(-0.2, 0.0))
         .animate(new CurveTween(curve: Curves.decelerate).animate(_controller));
@@ -80,8 +82,10 @@ class _TodoWidgetState extends State<TodoWidget>
                           ? Icons.casino_rounded
                           : Icons.check_circle,
                       color: !widget.isCompleted
-                          ? Theme.of(context).primaryColor
-                          : Theme.of(context).secondaryHeaderColor,
+                          ? AppTheme.of(context).color.primaryColor
+                          : AppTheme.of(context).color.secondaryHeaderColor,
+                      // ? Theme.of(context).primaryColor
+                      // : Theme.of(context).secondaryHeaderColor,
                     ),
                     SizedBox(
                       width: 10,
@@ -90,11 +94,16 @@ class _TodoWidgetState extends State<TodoWidget>
                       child: Text(
                         widget.title,
                         key: Key("text" + "${widget.id}"),
-                        style: TextStyle(
-                            fontSize: 14,
+                        style: AppTheme.of(context).typography.title3.copyWith(
                             color: !widget.isCompleted
                                 ? Colors.black
                                 : Colors.grey),
+
+                        // TextStyle(
+                        //     fontSize: 14,
+                        //     color: !widget.isCompleted
+                        //         ? Colors.black
+                        //         : Colors.grey),
                       ),
                     ),
                     !widget.isCompleted
@@ -104,7 +113,8 @@ class _TodoWidgetState extends State<TodoWidget>
                             child: Icon(Icons.check),
                             style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
-                                  Theme.of(context).primaryColor),
+                                  AppTheme.of(context).color.primaryColor),
+                              // Theme.of(context).primaryColor),
                             ),
                           )
                         : SizedBox.shrink(),
@@ -118,8 +128,10 @@ class _TodoWidgetState extends State<TodoWidget>
                           width: 5,
                           height: 20,
                           color: !widget.isCompleted
-                              ? Theme.of(context).primaryColor
-                              : Theme.of(context).accentColor,
+                              ? AppTheme.of(context).color.primaryColor
+                              : AppTheme.of(context).color.accentColor,
+                          // ? Theme.of(context).primaryColor
+                          // : Theme.of(context).accentColor,
                         ),
                       ],
                     ),
@@ -144,9 +156,10 @@ class _TodoWidgetState extends State<TodoWidget>
                                 constraint.maxWidth * animation.value.dx * -1,
                             child: ElevatedButton(
                                 style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all<Color>(
-                                          Theme.of(context).primaryColor),
+                                  backgroundColor: MaterialStateProperty.all<
+                                          Color>(
+                                      AppTheme.of(context).color.primaryColor),
+                                  // Theme.of(context).primaryColor),
                                 ),
                                 key: Key("deleteButton" + "${widget.id}"),
                                 onPressed: () => _deleteTodo(widget.id),

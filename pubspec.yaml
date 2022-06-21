@@ -37,6 +37,10 @@ dev_dependencies:
   sqflite: ^2.0.0+3
   path:
   test:
+  built_value: ^8.1.4
+  build_runner: ^2.1.7
+  built_value_generator: ^8.1.4
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
